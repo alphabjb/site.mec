@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MecânicaEdu - Aprenda Mecânica Automotiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-car-side"></i>
+                    <div>
+                        <h1>MecânicaEdu</h1>
+                        <p>Aprenda Mecânica Automotiva</p>
+                    </div>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="#teoria">Teoria</a>
+                    <a href="#pratica">Prática</a>
+                    <a href="jogo.html">Jogo 3D</a>
+                    <a href="tutoriais.html">Tutoriais</a>
+                </nav>
+                <div class="nav-actions">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="jogo.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Começar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Aprenda <span class="text-blue">Mecânica</span><br>
+                        <span class="text-yellow">Automotiva</span>
+                    </h1>
+                    <p class="hero-description">
+                        Descubra como funcionam os motores, aprenda a desmontar e montar peças, 
+                        e pratique com nosso simulador 3D interativo do motor AP.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#teoria" class="btn btn-primary btn-large">
+                            <i class="fas fa-book-open"></i>
+                            Começar Teoria
+                        </a>
+                        <a href="jogo.html" class="btn btn-outline btn-large">
+                            <i class="fas fa-gamepad"></i>
+                            Jogar Simulador 3D
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teoria do Motor -->
+        <section id="teoria" class="teoria-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Como Funciona um Motor</h2>
+                    <p>Entenda os princípios fundamentais do funcionamento de um motor de combustão interna</p>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="ciclo-otto">Ciclo Otto</button>
+                        <button class="tab-btn" data-tab="componentes">Componentes</button>
+                        <button class="tab-btn" data-tab="sistemas">Sistemas</button>
+                        <button class="tab-btn" data-tab="funcionamento">Funcionamento</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Ciclo Otto -->
+                        <div class="tab-panel active" id="ciclo-otto">
+                            <div class="grid-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <i class="fas fa-bolt text-yellow"></i>
+                                        <h3>Os 4 Tempos do Motor</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="tempo-item border-blue">
+                                            <h4>1º Tempo - Admissão</h4>
+                                            <p>O pistão desce, criando vácuo que puxa a mistura ar-combustível para dentro do cilindro através da válvula de admissão aberta.</p>
+                                        </div>
+                                        <div class="tempo-item border-green">
+                                            <h4>2º Tempo - Compressão</h4>
+                                            <p>Com as válvulas fechadas, o pistão sobe comprimindo a mistura ar-combustível, aumentando sua temperatura e pressão.</p>
+                                        </div>
+                                        <div class="tempo-item border-red">
+                                            <h4>3º Tempo - Combustão</h4>
+                                            <p>A vela de ignição gera uma faísca que inflama a mistura comprimida, criando uma explosão que empurra o pistão para baixo.</p>
+                                        </div>
+                                        <div class="tempo-item border-purple">
+                                            <h4>4º Tempo - Escape</h4>
+                                            <p>O pistão sobe novamente, expulsando os gases queimados através da válvula de escape aberta.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagram-container">
+                                    <img src="https://via.placeholder.com/400x400/4a5568/ffffff?text=Diagrama+Ciclo+Otto" alt="Diagrama do ciclo Otto" class="diagram-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Componentes -->
+                        <div class="tab-panel" id="componentes">
+                            <div class="grid-3">
+                                <div class="component-card">
+                                    <i class="fas fa-cog text-blue"></i>
+                                    <h3>Pistão</h3>
+                                    <p>Peça móvel que se desloca dentro do cilindro, responsável por comprimir a mistura e transmitir a força da combustão.</p>
+                                </div>
+                                <div class="component-card">
+                                    <i class="fas fa-tools text-green"></i>
+                                    <h3>Biela</h3>
+                                    <p>Conecta o pistão ao virabrequim, convertendo o movimento linear do pistão em movimento rotativo.</p>
+                                </div>
+                                <div class="component-card">
+                                    <i class="fas fa-car-side text-red"></i>
+                                    <h3>Virabrequim</h3>
+                                    <p>Eixo principal que recebe a força das bielas e transmite o movimento rotativo para as rodas.</p>
+                                </div>
+                                <div class="component-card">
+                                    <i class="fas fa-gas-pump text-yellow"></i>
+                                    <h3>Válvulas</h3>
+                                    <p>Controlam a entrada da mistura ar-combustível (admissão) e a saída dos gases queimados (escape).</p>
+                                </div>
+                                <div class="component-card">
+                                    <i class="fas fa-bolt text-purple"></i>
+                                    <h3>Vela de Ignição</h3>
+                                    <p>Gera a faísca elétrica necessária para inflamar a mistura ar-combustível no momento certo.</p>
+                                </div>
+                                <div class="component-card">
+                                    <i class="fas fa-thermometer-half text-blue"></i>
+                                    <h3>Cabeçote</h3>
+                                    <p>Parte superior do motor que abriga as válvulas, velas de ignição e os dutos de admissão e escape.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sistemas -->
+                        <div class="tab-panel" id="sistemas">
+                            <div class="grid-2">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3>Sistemas Principais</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="sistema-item">
+                                            <span class="numero">1</span>
+                                            <div>
+                                                <h4>Sistema de Alimentação</h4>
+                                                <p>Responsável por fornecer a mistura ar-combustível na proporção correta</p>
+                                            </div>
+                                        </div>
+                                        <div class="sistema-item">
+                                            <span class="numero">2</span>
+                                            <div>
+                                                <h4>Sistema de Ignição</h4>
+                                                <p>Gera a faísca no momento exato para inflamar a mistura</p>
+                                            </div>
+                                        </div>
+                                        <div class="sistema-item">
+                                            <span class="numero">3</span>
+                                            <div>
+                                                <h4>Sistema de Arrefecimento</h4>
+                                                <p>Mantém a temperatura do motor dentro dos limites ideais</p>
+                                            </div>
+                                        </div>
+                                        <div class="sistema-item">
+                                            <span class="numero">4</span>
+                                            <div>
+                                                <h4>Sistema de Lubrificação</h4>
+                                                <p>Reduz o atrito entre as peças móveis e remove impurezas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagram-container">
+                                    <img src="https://via.placeholder.com/400x300/4a5568/ffffff?text=Sistemas+do+Motor" alt="Sistemas do motor" class="diagram-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Funcionamento -->
+                        <div class="tab-panel" id="funcionamento">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Sequência de Funcionamento</h3>
+                                    <p>Como todos os componentes trabalham juntos</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="funcionamento-steps">
+                                        <div class="step">
+                                            <div class="step-number bg-blue">1</div>
+                                            <div>
+                                                <h4>Partida do Motor</h4>
+                                                <p>O motor de arranque gira o virabrequim, iniciando o movimento dos pistões</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number bg-green">2</div>
+                                            <div>
+                                                <h4>Sincronização</h4>
+                                                <p>O comando de válvulas sincroniza a abertura/fechamento das válvulas com o movimento dos pistões</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number bg-yellow">3</div>
+                                            <div>
+                                                <h4>Ciclo Contínuo</h4>
+                                                <p>Os 4 tempos se repetem continuamente em cada cilindro, gerando movimento rotativo constante</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number bg-red">4</div>
+                                            <div>
+                                                <h4>Transmissão de Força</h4>
+                                                <p>A força é transmitida através da embreagem, câmbio e diferencial até as rodas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jogo 3D -->
+        <section id="jogo" class="jogo-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Simulador 3D - Motor AP</h2>
+                    <p>Aprenda montando! Nosso simulador 3D interativo permite que você monte e desmonte um motor AP virtual</p>
+                </div>
+
+                <div class="jogo-grid">
+                    <div class="jogo-main">
+                        <div class="card dark">
+                            <div class="card-header">
+                                <i class="fas fa-gamepad text-blue"></i>
+                                <h3>Simulador Interativo</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="jogo-preview">
+                                    <i class="fas fa-car-side jogo-icon"></i>
+                                    <p>Simulador 3D do Motor AP</p>
+                                    <a href="jogo.html" class="btn btn-primary">
+                                        <i class="fas fa-play"></i>
+                                        Iniciar Simulação
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jogo-sidebar">
+                        <div class="card dark">
+                            <div class="card-header">
+                                <h3>Controles</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="controles">
+                                    <div class="controle-item">
+                                        <span>Rotacionar:</span>
+                                        <span class="badge">Mouse</span>
+                                    </div>
+                                    <div class="controle-item">
+                                        <span>Zoom:</span>
+                                        <span class="badge">Scroll</span>
+                                    </div>
+                                    <div class="controle-item">
+                                        <span>Selecionar:</span>
+                                        <span class="badge">Clique</span>
+                                    </div>
+                                    <div class="controle-item">
+                                        <span>Montar:</span>
+                                        <span class="badge">Botão</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card dark">
+                            <div class="card-header">
+                                <h3>Benefícios</h3>
+                            </div>
+                            <div class="card-content">
+                                <ul class="beneficios">
+                                    <li><i class="fas fa-check"></i> Aprenda sem sujar as mãos</li>
+                                    <li><i class="fas fa-check"></i> Visualize cada componente em 3D</li>
+                                    <li><i class="fas fa-check"></i> Entenda a função de cada peça</li>
+                                    <li><i class="fas fa-check"></i> Pratique quantas vezes quiser</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutoriais -->
+        <section id="tutoriais" class="tutoriais-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tutoriais Detalhados</h2>
+                    <p>Aprenda passo a passo como desmontar e montar componentes do motor com nossos tutoriais detalhados</p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="tutorial-card">
+                        <div class="tutorial-image">
+                            <img src="https://via.placeholder.com/300x200/4a5568/ffffff?text=Cabeçote" alt="Desmontagem do Cabeçote">
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Desmontagem do Cabeçote</h3>
+                            <p>Aprenda a remover o cabeçote do motor AP com segurança</p>
+                            <div class="tutorial-badges">
+                                <span class="badge secondary">Intermediário</span>
+                                <span class="badge outline">Tempo: 2-3 horas</span>
+                            </div>
+                            <a href="tutorial-cabecote.html" class="btn btn-primary btn-full">
+                                Ver Tutorial
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-card">
+                        <div class="tutorial-image">
+                            <img src="https://via.placeholder.com/300x200/4a5568/ffffff?text=Pistões" alt="Montagem dos Pistões">
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Montagem dos Pistões</h3>
+                            <p>Processo completo de instalação dos pistões e bielas</p>
+                            <div class="tutorial-badges">
+                                <span class="badge secondary">Avançado</span>
+                                <span class="badge outline">Tempo: 4-5 horas</span>
+                            </div>
+                            <a href="tutorial-pistoes.html" class="btn btn-primary btn-full">
+                                Ver Tutorial
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-card">
+                        <div class="tutorial-image">
+                            <img src="https://via.placeholder.com/300x200/4a5568/ffffff?text=Válvulas" alt="Regulagem de Válvulas">
+                        </div>
+                        <div class="tutorial-content">
+                            <h3>Regulagem de Válvulas</h3>
+                            <p>Como ajustar corretamente a folga das válvulas</p>
+                            <div class="tutorial-badges">
+                                <span class="badge secondary">Básico</span>
+                                <span class="badge outline">Tempo: 1-2 horas</span>
+                            </div>
+                            <a href="tutorial-valvulas.html" class="btn btn-primary btn-full">
+                                Ver Tutorial
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="tutoriais.html" class="btn btn-outline btn-large">
+                        Ver Todos os Tutoriais
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-car-side"></i>
+                        <h3>MecânicaEdu</h3>
+                    </div>
+                    <p>Plataforma educativa para aprendizado de mecânica automotiva com foco no motor AP.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#teoria">Teoria do Motor</a></li>
+                        <li><a href="jogo.html">Simulador 3D</a></li>
+                        <li><a href="tutoriais.html">Tutoriais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Tem dúvidas ou sugestões? Entre em contato conosco pelo email:
+                        <a href="mailto:contato@mecanicaedu.com.br">contato@mecanicaedu.com.br</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MecânicaEdu. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

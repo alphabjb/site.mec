@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador 3D - Motor AP | MecânicaEdu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jogo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="jogo-container">
+        <!-- Painel Lateral -->
+        <div class="sidebar">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Simulador Motor AP</h3>
+                </div>
+                <div class="card-content">
+                    <div class="progresso-section">
+                        <div class="progresso-header">
+                            <span>Progresso</span>
+                            <span id="progressoTexto">0/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressoFill"></div>
+                        </div>
+                    </div>
+
+                    <div class="pontuacao">
+                        <div class="pontos" id="pontuacao">0 pts</div>
+                        <div class="pontos-label">Pontuação</div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" id="iniciarJogo">
+                        Iniciar Jogo
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" id="pecaSelecionada" style="display: none;">
+                <div class="card-header">
+                    <h3>Peça Selecionada</h3>
+                </div>
+                <div class="card-content">
+                    <h4 id="nomePeca"></h4>
+                    <p id="descricaoPeca"></p>
+                    <span class="badge" id="statusPeca">Não Montada</span>
+                    <button class="btn btn-primary btn-full" id="montarPeca" style="display: none;">
+                        Montar Peça
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Lista de Peças</h3>
+                </div>
+                <div class="card-content">
+                    <div class="pecas-lista" id="pecasLista">
+                        <!-- Peças serão adicionadas dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área 3D -->
+        <div class="area-3d">
+            <div class="motor-container" id="motorContainer">
+                <!-- Peças do motor serão renderizadas aqui -->
+            </div>
+
+            <!-- Instruções -->
+            <div class="instrucoes">
+                <h3>Controles:</h3>
+                <ul>
+                    <li>• Clique nas peças para selecioná-las</li>
+                    <li>• Arraste para rotacionar a visualização</li>
+                    <li>• Scroll para zoom</li>
+                    <li>• Monte todas as peças para completar</li>
+                </ul>
+            </div>
+
+            <!-- Modal de Conclusão -->
+            <div class="modal" id="modalConclusao" style="display: none;">
+                <div class="modal-content">
+                    <h2>Parabéns! 🎉</h2>
+                    <p>Você montou o motor AP com sucesso!</p>
+                    <p class="pontuacao-final">Pontuação Final: <span id="pontuacaoFinal">0</span> pontos</p>
+                    <div class="modal-buttons">
+                        <button class="btn btn-primary" id="jogarNovamente">Jogar Novamente</button>
+                        <a href="index.html" class="btn btn-outline">Voltar ao Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jogo.js"></script>
+</body>
+</html>

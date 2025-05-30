@@ -1,0 +1,310 @@
+.jogo-container {
+  display: flex;
+  height: 100vh;
+  background: #1e293b;
+}
+
+.sidebar {
+  width: 320px;
+  background: #374151;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar .card {
+  background: #4b5563;
+  color: white;
+}
+
+.progresso-section {
+  margin-bottom: 1rem;
+}
+
+.progresso-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #6b7280;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3b82f6;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.pontuacao {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.pontos {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.pontos-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.pecas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.peca-item {
+  padding: 0.75rem;
+  background: #6b7280;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.peca-item:hover {
+  background: #5b6471;
+}
+
+.peca-item.selected {
+  background: #3b82f6;
+}
+
+.peca-item.montada {
+  background: #22c55e;
+}
+
+.peca-nome {
+  color: white;
+  font-size: 0.875rem;
+}
+
+.check-icon {
+  color: white;
+  font-size: 0.75rem;
+}
+
+.area-3d {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+}
+
+.motor-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.motor-3d {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.peca-3d {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.peca-3d:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.peca-3d.selected {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.peca-3d.montada {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+}
+
+.peca-3d:not(.montada) {
+  opacity: 0.7;
+}
+
+/* Posições das peças */
+.bloco {
+  background: #4a5568;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 80px;
+}
+
+.pistao1 {
+  background: #e53e3e;
+  left: 30%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 60px;
+}
+
+.pistao2 {
+  background: #e53e3e;
+  left: 70%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 60px;
+}
+
+.virabrequim {
+  background: #2d3748;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 30px;
+}
+
+.cabecote {
+  background: #4299e1;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 40px;
+}
+
+.instrucoes {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 250px;
+}
+
+.instrucoes h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.instrucoes ul {
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.instrucoes li {
+  margin-bottom: 0.25rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+.pontuacao-final {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .jogo-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    order: 2;
+  }
+
+  .area-3d {
+    order: 1;
+    height: 60vh;
+  }
+
+  .motor-3d {
+    width: 300px;
+    height: 300px;
+  }
+
+  .instrucoes {
+    position: relative;
+    margin: 1rem;
+    top: auto;
+    left: auto;
+  }
+}
